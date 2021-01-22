@@ -1,0 +1,68 @@
+body
+	font-family: 'Roboto-Regular', 'Helvetica', sans-serif
+	font-weight: 400
+	font-size: 10px
+.title
+
+.hidden
+	opacity: 0
+	visibility: hidden
+.btn
+	padding: 15px 25px
+	width: 100%
+	text-transform: uppercase
+	border: none
+	outline: none
+	color: $whitecolor
+	background-color: $activecolor
+	transition: all 0.5s
+	+fluidFontSize(10,13,350,1170)
+	+Roboto-Regular
+	&:hover
+		cursor: pointer
+		box-shadow: 0 14px 28px $activecolor
+	&--light
+		background-color: $btn-light
+		color: $metalcolor
+		&:hover
+			cursor: pointer
+			box-shadow: 0 14px 28px #fffdfd40, 0 10px 10px #ffffff38
+.form
+	&__wrap
+		margin: 50px 0 20px
+		display: flex
+		flex-wrap: wrap
+	&__title
+		display: block
+		margin-bottom: 20px
+		width: 100%
+		text-align: center
+	&__item
+		width: 50%
+		margin-bottom: 20px
+		color: #555555
+		&--big
+			width: 100%
+		@include _480
+			width: 100%
+	&__label
+		padding-left: 15px
+	&__input
+
+	&__email, &__textarea, &__btn
+		width: 100%
+	&__textarea
+		height: 120px
+		margin-bottom: 50px
+		resize: none
+		padding-top: 10px
+	&__btn
+		width: 100%
+		margin: 0 auto
+		background-color: $metalcolor
+		background-image: none
+		opacity: 0.7
+input:invalid
+	border-color: red
+	color: red
+	box-shadow: none

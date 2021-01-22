@@ -1,0 +1,54 @@
+.header
+	&-menu
+		&__wrap
+			background-color: $metalcolor
+		&__item
+			padding: 15px 15px
+			margin: 10px 0
+			color: $whitecolor
+			border-right: 1px solid rgba(255,255,255, 0.07)
+			+fluidFontSize(12,15,350,1170)
+			&:nth-child(4)
+				padding-right: 0px
+				border-right: none
+			&:nth-child(1)
+				padding-left: 0px
+	&-top
+		&__wrap
+			margin-top: 15px
+		&__items
+			display: flex
+			flex-direction: row
+		&__item
+			width: 50%
+			margin-right: 10px
+			display: flex
+			align-items: center
+		&__icon
+			display: inline-block
+			border: 0.3px solid $metalcolor
+			border-radius: 3px
+			padding: 3px
+			margin-right: 10px
+		&__img
+			width: 22px
+			height: 29px
+		&__text
+			text-transform: uppercase
+			+fluidFontSize(12,15,350,1170)
+			position: relative
+			padding: 5px
+			&::after
+				content: ""
+				position: absolute
+				transform: scaleX(0)
+				height: 2px
+				background-color: $metalcolor
+				bottom: 0px
+				right: 0
+				left: 0
+				transition: 0.3s
+			&:hover
+				&::after
+					transform: scaleX(1)
+			+Roboto-Light

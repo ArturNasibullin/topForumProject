@@ -1,0 +1,330 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.2;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+li {
+  display: inline-block;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../fonts/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url("../fonts/Roboto-Thin.eot");
+  src: url("../fonts/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Thin.woff") format("woff"), url("../fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Medium.eot");
+  src: url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url("../fonts/Roboto-Black.eot");
+  src: url("../fonts/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Black.woff") format("woff"), url("../fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Roboto-Regular', 'Helvetica', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn {
+  padding: 15px 25px;
+  width: 100%;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #c99c47;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: calc( 0.00366 * 100vw + 8.71951px);
+  font-family: 'Roboto-Regular', sans-serif;
+}
+
+.btn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 14px 28px #c99c47;
+          box-shadow: 0 14px 28px #c99c47;
+}
+
+.btn--light {
+  background-color: #e8d8b6;
+  color: #323232;
+}
+
+.btn--light:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 14px 28px #fffdfd40, 0 10px 10px #ffffff38;
+          box-shadow: 0 14px 28px #fffdfd40, 0 10px 10px #ffffff38;
+}
+
+.form__wrap {
+  margin: 50px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form__title {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.form__item {
+  width: 50%;
+  margin-bottom: 20px;
+  color: #555555;
+}
+
+.form__item--big {
+  width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .form__item {
+    width: 100%;
+  }
+}
+
+.form__label {
+  padding-left: 15px;
+}
+
+.form__email, .form__textarea, .form__btn {
+  width: 100%;
+}
+
+.form__textarea {
+  height: 120px;
+  margin-bottom: 50px;
+  resize: none;
+  padding-top: 10px;
+}
+
+.form__btn {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #323232;
+  background-image: none;
+  opacity: 0.7;
+}
+
+input:invalid {
+  border-color: red;
+  color: red;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.header-menu__wrap {
+  background-color: #323232;
+}
+
+.header-menu__item {
+  padding: 15px 15px;
+  margin: 10px 0;
+  color: white;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: calc( 0.00366 * 100vw + 10.71951px);
+}
+
+.header-menu__item:nth-child(4) {
+  padding-right: 0px;
+  border-right: none;
+}
+
+.header-menu__item:nth-child(1) {
+  padding-left: 0px;
+}
+
+.header-top__wrap {
+  margin-top: 15px;
+}
+
+.header-top__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header-top__item {
+  width: 50%;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top__icon {
+  display: inline-block;
+  border: 0.3px solid #323232;
+  border-radius: 3px;
+  padding: 3px;
+  margin-right: 10px;
+}
+
+.header-top__img {
+  width: 22px;
+  height: 29px;
+}
+
+.header-top__text {
+  text-transform: uppercase;
+  font-size: calc( 0.00366 * 100vw + 10.71951px);
+  position: relative;
+  padding: 5px;
+  font-family: 'Roboto-Light', sans-serif;
+}
+
+.header-top__text::after {
+  content: "";
+  position: absolute;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  background-color: #323232;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-top__text:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/*# sourceMappingURL=style.css.map */
