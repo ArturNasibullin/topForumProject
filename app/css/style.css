@@ -165,8 +165,8 @@ body {
 
 .btn:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 14px 28px #c99c47;
-          box-shadow: 0 14px 28px #c99c47;
+  -webkit-box-shadow: 0px 5px 10px 2px #c99c47;
+          box-shadow: 0px 5px 10px 2px #c99c47;
 }
 
 .btn--light {
@@ -176,8 +176,8 @@ body {
 
 .btn--light:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 14px 28px #fffdfd40, 0 10px 10px #ffffff38;
-          box-shadow: 0 14px 28px #fffdfd40, 0 10px 10px #ffffff38;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.349);
+          box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.349);
 }
 
 .form__wrap {
@@ -326,5 +326,73 @@ input:invalid {
 .header-top__text:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.hero-slider {
+  padding: 120px 20px;
+}
+
+.hero-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #f5f3f1;
+  padding: 15px;
+  border: 2px solid rgba(201, 156, 71, 0.4);
+}
+
+.hero-slide__wrap {
+  padding: 8px;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.hero-slide__date {
+  width: 30%;
+  margin: auto;
+  color: #c99c47;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: calc( 0.00488 * 100vw + 24.29268px);
+  padding: 25px 5px;
+  border: 2px solid #c99c47;
+  line-height: 1;
+  background-color: white;
+  line-height: 0.8;
+  font-family: 'Roboto-Black', sans-serif;
+}
+
+.hero-slide__date-small {
+  display: inline-block;
+  font-size: calc( 0.00244 * 100vw + 15.14634px);
+  margin-bottom: 5px;
+}
+
+.hero-slide__text {
+  width: 70%;
+  padding: 10px 15px;
+  text-align: justify;
+}
+
+.hero-slide__title {
+  color: #c99c47;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: calc( 0.00244 * 100vw + 11.14634px);
+}
+
+.hero-slide__descr {
+  font-size: calc( 0.00122 * 100vw + 11.57317px);
+  line-height: 1.4;
+  font-family: 'Roboto-Light', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

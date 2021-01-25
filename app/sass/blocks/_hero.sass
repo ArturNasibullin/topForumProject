@@ -1,1 +1,46 @@
+
 .hero
+	&-slider
+		padding: 120px 20px
+	&-slide
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		flex-direction: row
+		background-color: #f5f3f1
+		padding: 15px
+		border: 2px solid rgba(201,156 ,71 , 0.4)
+		&__wrap
+			padding: 8px
+			border: 2px solid $whitecolor
+			background-color: transparent
+		&__date
+			width: 30%
+			margin: auto
+			color: $activecolor
+			text-transform: uppercase
+			text-align: center
+			+fluidFontSize(26,30,350,1170)
+			padding: 25px 5px
+			border: 2px solid $activecolor
+			line-height: 1
+			background-color: $whitecolor
+			line-height: 0.8
+			&-small
+				display: inline-block
+				+fluidFontSize(16,18,350,1170)
+				margin-bottom: 5px
+			+Roboto-Black
+		&__text
+			width: 70%
+			padding: 10px 15px
+			text-align: justify
+		&__title
+			color: $activecolor
+			text-transform: uppercase
+			margin-bottom: 10px
+			+fluidFontSize(12,14,350,1170)
+		&__descr
+			+fluidFontSize(12,13,350,1170)
+			line-height: 1.4
+			+Roboto-Light
