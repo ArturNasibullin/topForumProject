@@ -256,6 +256,23 @@ input:invalid {
           box-shadow: none;
 }
 
+.arrow {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: .7;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .arrow {
+    display: none;
+  }
+}
+
 .header-menu__wrap {
   background-color: #323232;
 }
@@ -471,6 +488,10 @@ input:invalid {
   background-color: #323232;
 }
 
+.review__slider-wrap {
+  position: relative;
+}
+
 .review-item__wrap {
   width: 550px;
   display: -webkit-box;
@@ -554,5 +575,21 @@ input:invalid {
   font-size: 12px;
   line-height: 1.7;
   font-family: 'Roboto-Light', sans-serif;
+}
+
+.review-item__arrows {
+  position: absolute;
+  top: 100px;
+  left: -40px;
+  z-index: 999;
+}
+
+.review-item__arrows-right {
+  -webkit-transform: translateX(1170px);
+          transform: translateX(1170px);
+}
+
+.video__container {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
