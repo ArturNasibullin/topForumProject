@@ -3,10 +3,17 @@ body
 	font-weight: 400
 	font-size: 10px
 .title
-
+	text-transform: uppercase
+	text-align: center
+	font-weight: 500
+	+fluidFontSize(22,24,350,1170)
+	padding: 50px 0 40px
+	+Roboto-Medium
 .hidden
 	opacity: 0
 	visibility: hidden
+.background-color
+	background-color: $bg-color
 .btn
 	padding: 15px 25px
 	width: 100%

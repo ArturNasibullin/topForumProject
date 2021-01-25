@@ -113,6 +113,7 @@ input[type="submit"] {
 }
 
 @font-face {
+  font-family: 'Roboto-Medium';
   src: url("../fonts/Roboto-Medium.eot");
   src: url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
   font-weight: normal;
@@ -144,9 +145,22 @@ body {
   font-size: 10px;
 }
 
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: calc( 0.00244 * 100vw + 21.14634px);
+  padding: 50px 0 40px;
+  font-family: 'Roboto-Medium', sans-serif;
+}
+
 .hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+.background-color {
+  background-color: f8f3e9;
 }
 
 .btn {
@@ -455,5 +469,90 @@ input:invalid {
 
 .about__subscribe-btn {
   background-color: #323232;
+}
+
+.review-item__wrap {
+  width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-item__icon {
+  width: 20%;
+}
+
+.review-item__img {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  max-height: 120px;
+  min-height: 120px;
+  max-width: 120px;
+  min-width: 120px;
+  width: auto;
+  position: relative;
+  background-color: #fff;
+}
+
+.review-item__nofoto {
+  position: absolute;
+  top: 42px;
+  left: 38px;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.review-item__box {
+  width: 70%;
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+}
+
+.review-item__box::before {
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: -26px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 26.0px 15px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.review-item__names {
+  font-size: 17px;
+  font-family: 'Roboto-Medium', sans-serif;
+}
+
+.review-item__date {
+  display: inline-block;
+  padding: 11px 16px;
+  color: white;
+  background-color: #bbbbbd;
+  font-size: 10px;
+  margin: 10px 0;
+  font-family: 'Roboto-Light', sans-serif;
+}
+
+.review-item__text {
+  font-size: 12px;
+  line-height: 1.7;
+  font-family: 'Roboto-Light', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
