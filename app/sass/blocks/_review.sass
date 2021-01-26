@@ -1,10 +1,10 @@
 .review
 	position: relative
-	&__slider-wrap
+	&-slider__wrap
 		padding-bottom: 40px
+		max-height: 240px
 	&-item
 		&__wrap
-			width: 550px
 			display: flex
 			flex-wrap: wrap
 			flex-direction: row
@@ -32,7 +32,6 @@
 			width: 70%
 			background-color: #fff
 			padding: 20px
-			// margin-bottom: 40px
 			position: relative
 			&::before
 				content: ""
@@ -59,11 +58,13 @@
 		&__text
 			font-size: 12px
 			line-height: 1.7
+			max-height: 150px
+			overflow: auto
 			+Roboto-Light
 		&__arrows
 			position: absolute
-			top: 200px
-			left: 40px
-			z-index: 999
+			top: 60%
+			&-left
+				transform: translateX(-40px)
 			&-right
 				transform: translateX(1170px)

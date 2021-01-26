@@ -8,11 +8,12 @@
 			color: $whitecolor
 			border-right: 1px solid rgba(255,255,255, 0.07)
 			+fluidFontSize(12,15,350,1170)
+			transition: all 0.3s
+			&:hover
+				background-color: $activecolor
 			&:nth-child(4)
-				padding-right: 0px
 				border-right: none
 			&:nth-child(1)
-				padding-left: 0px
 	&-top
 		&__wrap
 			margin-top: 15px

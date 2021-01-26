@@ -1,7 +1,16 @@
 
 .hero
+	&-container
+		padding: 50px 20px
 	&-slider
-		padding: 120px 20px
+		position: relative
+		&__arrows
+			position: absolute
+			top: 30%
+			&-left
+				transform: translateX(-20px)
+			&-right
+				transform: translateX(450px)
 	&-slide
 		display: flex
 		flex-wrap: wrap
@@ -11,6 +20,8 @@
 		padding: 15px
 		border: 2px solid rgba(201,156 ,71 , 0.4)
 		&__wrap
+			padding: 0 5px
+		&__border
 			padding: 8px
 			border: 2px solid $whitecolor
 			background-color: transparent

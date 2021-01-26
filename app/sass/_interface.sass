@@ -25,11 +25,12 @@ body
 	color: $whitecolor
 	background-color: $activecolor
 	transition: all 0.3s
-	+fluidFontSize(10,13,350,1170)
+	+fluidFontSize(10,12,350,1170)
 	+Roboto-Regular
 	&:hover
 		cursor: pointer
 		box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.3)
+		transform: scale(1.01)
 	&--light
 		background-color: $btn-light
 		color: $metalcolor
@@ -76,10 +77,25 @@ input:invalid
 	color: red
 	box-shadow: none
 .arrow
+	padding: 5px
 	background-color: transparent
 	border: none
 	cursor: pointer
 	opacity: .7
+	width: 100%
+	background-position: 0 0
+	background-repeat: no-repeat
+	background-size: contain
+	z-index: 999
+	&-left
+		width: 12px
+		height: 47px
+		background-image: url(../img/left-arrow.png)
+	&-right
+		width: 12px
+		height: 47px
+		background-image: url(../img/right-arrow.png)
+
 	&:focus
 		outline: none
 	@include _768
