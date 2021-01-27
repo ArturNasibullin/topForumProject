@@ -1,12 +1,12 @@
 body
 	font-family: 'Roboto-Regular', 'Helvetica', sans-serif
 	font-weight: 400
-	font-size: 10px
+	+fluidFontSize(12,16)
 .title
 	text-transform: uppercase
 	text-align: center
 	font-weight: 500
-	+fluidFontSize(22,24,350,1170)
+	font-size: 1.5rem
 	padding: 50px 0 40px
 	+Roboto-Medium
 .hidden
@@ -25,7 +25,7 @@ body
 	color: $whitecolor
 	background-color: $activecolor
 	transition: all 0.3s
-	+fluidFontSize(10,12,350,1170)
+	font-size: 0.75rem
 	+Roboto-Regular
 	&:hover
 		cursor: pointer
@@ -37,45 +37,6 @@ body
 		&:hover
 			cursor: pointer
 			box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.349)
-.form
-	&__wrap
-		margin: 50px 0 20px
-		display: flex
-		flex-wrap: wrap
-	&__title
-		display: block
-		margin-bottom: 20px
-		width: 100%
-		text-align: center
-	&__item
-		width: 50%
-		margin-bottom: 20px
-		color: #555555
-		&--big
-			width: 100%
-		@include _480
-			width: 100%
-	&__label
-		padding-left: 15px
-	&__input
-
-	&__email, &__textarea, &__btn
-		width: 100%
-	&__textarea
-		height: 120px
-		margin-bottom: 50px
-		resize: none
-		padding-top: 10px
-	&__btn
-		width: 100%
-		margin: 0 auto
-		background-color: $metalcolor
-		background-image: none
-		opacity: 0.7
-input:invalid
-	border-color: red
-	color: red
-	box-shadow: none
 .arrow
 	padding: 5px
 	background-color: transparent
@@ -95,8 +56,46 @@ input:invalid
 		width: 12px
 		height: 47px
 		background-image: url(../img/right-arrow.png)
-
 	&:focus
 		outline: none
-	@include _768
-		display: none
+	// @include _768
+	// 	display: none
+// .form
+// 	&__wrap
+// 		margin: 50px 0 20px
+// 		display: flex
+// 		flex-wrap: wrap
+// 	&__title
+// 		display: block
+// 		margin-bottom: 20px
+// 		width: 100%
+// 		text-align: center
+// 	&__item
+// 		width: 50%
+// 		margin-bottom: 20px
+// 		color: #555555
+// 		&--big
+// 			width: 100%
+// 		@include _480
+// 			width: 100%
+// 	&__label
+// 		padding-left: 15px
+// 	&__input
+
+// 	&__email, &__textarea, &__btn
+// 		width: 100%
+// 	&__textarea
+// 		height: 120px
+// 		margin-bottom: 50px
+// 		resize: none
+// 		padding-top: 10px
+// 	&__btn
+// 		width: 100%
+// 		margin: 0 auto
+// 		background-color: $metalcolor
+// 		background-image: none
+// 		opacity: 0.7
+// input:invalid
+// 	border-color: red
+// 	color: red
+// 	box-shadow: none

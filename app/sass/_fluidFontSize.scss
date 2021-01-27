@@ -7,7 +7,7 @@
 	@return $number;
   }
   
-  @function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+  @function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px, $fallback: $f-max ) {
 	$f-min: strip-unit($f-min);
 	$f-max: strip-unit($f-max);
 	$w-min: strip-unit($w-min);
@@ -19,11 +19,12 @@
 	  $b: $b + $units;
   
 	  @return calc( #{$k} * 100vw + #{$b} );
+
   }
   
-  @mixin fluidFontSize($f-min, $f-max, $w-min, $w-max) {
+  @mixin fluidFontSize($f-min, $f-max, $w-min: 350, $w-max: 1170) {
 	
-	  font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max);  
+	  font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: $f-max );  
   }
   
 
