@@ -9,8 +9,10 @@
 	<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> -->
 
-	<link rel="stylesheet" href="css/libs/glide.core.min.css">
-	<link rel="stylesheet" href="css/libs/glide.theme.min.css">
+	<link rel="stylesheet" href="css/libs/glider.min.css">
+	<script>
+
+	</script>
 
 
 	<link rel="stylesheet" href="css/libs/bootstrap-grid.min.css">
@@ -27,11 +29,30 @@
 						<div class="col-md-5">
 							<nav class="menu">
 								<ul class="menu__container">
-									<li class="header-menu__item"><a href="#" class="header-menu__link">Sponsors</a>
+									<li class="header-menu__item">
+										<a href="#" class="header-menu__link">Sponsors</a>
+										<ul class="header-submenu">
+											<li class="header-submenu__link"><a href="#">General sponsor</a></li>
+											<li class="header-submenu__link"><a href="#">Platinum sponsor</a></li>
+											<li class="header-submenu__link"><a href="#">Gold sponsor</a></li>
+											<li class="header-submenu__link"><a href="#">Silver sponsor</a></li>
+										</ul>
 									</li>
 									<li class="header-menu__item"><a href="#" class="header-menu__link">Exhibitors</a>
+										<ul class="header-submenu">
+											<li class="header-submenu__link"><a href="#">Wealth TOP FORUM Israel
+													2021</a></li>
+											<li class="header-submenu__link"><a href="#">TOP Marketing 2021</a></li>
+											<li class="header-submenu__link"><a href="#">World Education Forum</a></li>
+										</ul>
 									</li>
 									<li class="header-menu__item"><a href="#" class="header-menu__link">Speakers</a>
+										<ul class="header-submenu">
+											<li class="header-submenu__link"><a href="#">Wealth TOP FORUM Israel
+													2021</a></li>
+											<li class="header-submenu__link"><a href="#">TOP Marketing 2021</a></li>
+											<li class="header-submenu__link"><a href="#">World Education Forum</a></li>
+										</ul>
 									</li>
 									<li class="header-menu__item"><a href="#" class="header-menu__link">Media</a></li>
 								</ul>
@@ -84,86 +105,83 @@
 				<div class="row">
 					<div class="col-lg-5 offset-lg-7">
 						<div class="hero-slider">
-							<div class="hero-slider__arrows" data-glide-el="controls">
-								<button class="arrow arrow-left hero-slider__arrows-left" data-glide-dir="<">
+							<div class="hero-slider__arrows">
+								<button aria-label="Previous" class="arrow arrow-left hero-slider__arrows-left">
+								</button>
+								<button aria-label="Next" class="arrow arrow-right hero-slider__arrows-right">
 								</button>
 							</div>
-							<div class="glide__track" data-glide-el="track">
-								<ul class="hero-slides">
-									<li class="hero-slide__wrap">
-										<div class="hero-slide__border">
-											<div class="hero-slide">
-												<p class="hero-slide__date">26-27 <span
-														class="hero-slide__date-small">February</span>
-													2021
-												</p>
-												<div class="hero-slide__text">
-													<h1 class="hero-slide__title">Wealth TOP FORUM Israel 2021</h1>
-													<div class="hero-slide__descr">Lorem Ipsum is simply dummy text of
-														the
-														printing and
-														typesetting
-														industry. Lorem Ipsum has been the industry's standard dummy
-													</div>
+							<ul class="hero-slider__wrap">
+								<li class="hero-slide__wrap">
+									<div class="hero-slide__border">
+										<div class="hero-slide">
+											<p class="hero-slide__date">26-27 <span
+													class="hero-slide__date-small">February</span>
+												2021
+											</p>
+											<div class="hero-slide__text">
+												<h1 class="hero-slide__title">Wealth TOP FORUM Israel 2021</h1>
+												<div class="hero-slide__descr">Lorem Ipsum is simply dummy text of
+													the
+													printing and
+													typesetting
+													industry. Lorem Ipsum has been the industry's standard dummy
 												</div>
 											</div>
 										</div>
-									</li>
-									<li class="hero-slide__wrap">
-										<div class="hero-slide__border">
-											<div class="hero-slide">
-												<p class="hero-slide__date">4-6 <span
-														class="hero-slide__date-small">March</span>
-													2021
-												</p>
-												<div class="hero-slide__text">
-													<h1 class="hero-slide__title">TOP Marketing 2021</h1>
-													<div class="hero-slide__descr">Annually gathers the best ideas on
-														the
-														market, the
-														most
-														advanced
-														marketers and cool cases.
-													</div>
+									</div>
+								</li>
+								<li class="hero-slide__wrap">
+									<div class="hero-slide__border">
+										<div class="hero-slide">
+											<p class="hero-slide__date">4-6 <span
+													class="hero-slide__date-small">March</span>
+												2021
+											</p>
+											<div class="hero-slide__text">
+												<h1 class="hero-slide__title">TOP Marketing 2021</h1>
+												<div class="hero-slide__descr">Annually gathers the best ideas on
+													the
+													market, the
+													most
+													advanced
+													marketers and cool cases.
 												</div>
 											</div>
 										</div>
-									</li>
-									<li class="hero-slide__wrap">
-										<div class="hero-slide__border">
-											<div class="hero-slide">
-												<p class="hero-slide__date">20-24 <span
-														class="hero-slide__date-small">March</span>
-													2021
-												</p>
-												<div class="hero-slide__text">
-													<h1 class="hero-slide__title">World Education Forum</h1>
-													<div class="hero-slide__descr">The world’s largest gathering of
-														education
-														and skills
-														ministers. Lorem Ipsum is simply dummy text of the printing and
-														typesetting
-														industry. Lorem Ipsum has been the industry's standard dummy.
-														Lorem
-														Ipsum is
-														simply dummy text of the printing and
-														typesetting
-														industry. Lorem Ipsum has been the industry's standard dummy
-													</div>
+									</div>
+								</li>
+								<li class="hero-slide__wrap">
+									<div class="hero-slide__border">
+										<div class="hero-slide">
+											<p class="hero-slide__date">20-24 <span
+													class="hero-slide__date-small">March</span>
+												2021
+											</p>
+											<div class="hero-slide__text">
+												<h1 class="hero-slide__title">World Education Forum</h1>
+												<div class="hero-slide__descr">The world’s largest gathering of
+													education
+													and skills
+													ministers. Lorem Ipsum is simply dummy text of the printing and
+													typesetting
+													industry. Lorem Ipsum has been the industry's standard dummy.
+													Lorem
+													Ipsum is
+													simply dummy text of the printing and
+													typesetting
+													industry. Lorem Ipsum has been the industry's standard dummy
 												</div>
 											</div>
 										</div>
-									</li>
-								</ul>
-							</div>
-							<div class="hero-slider__arrows" data-glide-el="controls">
-								<button class="arrow arrow-right hero-slider__arrows-right" data-glide-dir=">">
-								</button>
-							</div>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</main>
 
@@ -242,92 +260,115 @@
 		<div class="container">
 			<h2 class="review__title title">Customers reviews</h2>
 			<div class="review-slider">
-				<div class="review-item__arrows" data-glide-el="controls">
-					<button class="arrow arrow-left review-item__arrows-left" data-glide-dir="<">
+				<div class="review-item__arrows">
+					<button class="arrow arrow-left review-item__arrows-left">
 						<img src="img/left-arrow.png" alt="">
 					</button>
-					<button class="arrow arrow-right review-item__arrows-right" data-glide-dir=">">
+					<button class="arrow arrow-right review-item__arrows-right">
 						<img src="img/right-arrow.png" alt="">
 					</button>
 				</div>
-				<div class="glide__track" data-glide-el="track">
-					<ul class="review-slider__wrap">
-						<li class="review-item">
-							<div class="review-item__wrap">
-								<div class="review-item__icon">
-									<div class="review-item__img">
-										<img src="img/review/1.jpg" alt="review">
-									</div>
-								</div>
-								<div class="review-item__box">
-									<div class="review-item__names">Alexander and Vera</div>
-									<p class="review-item__date">04 SEPTEMBER 2020</p>
-									<p class="review-item__text">Lorem Ipsum is simply dummy text of the printing and
-										typesetting
-										industry.
-										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-										when an
-										unknown
-										printer took a galley of type and scrambled it to make a type specimen book. It
-										has
-										survived
-										not
-										only five centuries.</p>
+				<ul class="review-slider__wrap">
+					<li class="review-item">
+						<div class="review-item__wrap">
+							<div class="review-item__icon">
+								<div class="review-item__img">
+									<img src="img/review/1.jpg" alt="review">
 								</div>
 							</div>
-						</li>
+							<div class="review-item__box">
+								<div class="review-item__names">Alexander and Vera</div>
+								<p class="review-item__date">04 SEPTEMBER 2020</p>
+								<p class="review-item__text">Lorem Ipsum is simply dummy text of the printing and
+									typesetting
+									industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+									when an
+									unknown
+									printer took a galley of type and scrambled it to make a type specimen book. It
+									has
+									survived
+									not
+									only five centuries.</p>
+							</div>
+						</div>
+					</li>
 
-						<li class="review-item">
-							<div class="review-item__wrap">
-								<div class="review-item__icon">
-									<div class="review-item__img">
-										<img src="img/review/nofoto.png" alt="review" class="review-item__nofoto">
-									</div>
-								</div>
-								<div class="review-item__box">
-									<div class="review-item__names">Alexander and Vera</div>
-									<p class="review-item__date">04 SEPTEMBER 2020</p>
-									<p class="review-item__text">Lorem Ipsum is simply dummy text of the printing and
-										typesetting
-										industry.
-										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-										when an
-										unknown
-										printer took a galley of type and scrambled it to make a type specimen book. It
-										has
-										survived
-										not
-										only five centuries.</p>
+					<li class="review-item">
+						<div class="review-item__wrap">
+							<div class="review-item__icon">
+								<div class="review-item__img">
+									<img src="img/review/nofoto.png" alt="review" class="review-item__nofoto">
 								</div>
 							</div>
-						</li>
+							<div class="review-item__box">
+								<div class="review-item__names">Alexander and Vera</div>
+								<p class="review-item__date">04 SEPTEMBER 2020</p>
+								<p class="review-item__text">Lorem Ipsum is simply dummy text of the printing and
+									typesetting
+									industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+									when an
+									unknown
+									printer took a galley of type and scrambled it to make a type specimen book. It
+									has
+									survived
+									not
+									only five centuries.</p>
+							</div>
+						</div>
+					</li>
 
-						<li class="review-item">
-							<div class="review-item__wrap">
-								<div class="review-item__icon">
-									<div class="review-item__img">
-										<img src="img/review/1.jpg" alt="review">
-									</div>
-								</div>
-								<div class="review-item__box">
-									<div class="review-item__names">Alexander and Vera</div>
-									<p class="review-item__date">04 SEPTEMBER 2020</p>
-									<p class="review-item__text">Lorem Ipsum is simply dummy text of the printing and
-										typesetting
-										industry.
-										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-										when an
-										unknown
-										printer took a galley of type and scrambled it to make a type specimen book. It
-										has
-										survived
-										not
-										only five centuries.</p>
+					<li class="review-item">
+						<div class="review-item__wrap">
+							<div class="review-item__icon">
+								<div class="review-item__img">
+									<img src="img/review/nofoto.png" alt="review" class="review-item__nofoto">
 								</div>
 							</div>
-						</li>
-					</ul>
-				</div>
+							<div class="review-item__box">
+								<div class="review-item__names">Alexander and Vera</div>
+								<p class="review-item__date">04 SEPTEMBER 2020</p>
+								<p class="review-item__text">Lorem Ipsum is simply dummy text of the printing and
+									typesetting
+									industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+									when an
+									unknown
+									printer took a galley of type and scrambled it to make a type specimen book. It
+									has
+									survived
+									not
+									only five centuries.</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="review-item">
+						<div class="review-item__wrap">
+							<div class="review-item__icon">
+								<div class="review-item__img">
+									<img src="img/review/1.jpg" alt="review">
+								</div>
+							</div>
+							<div class="review-item__box">
+								<div class="review-item__names">Alexander and Vera</div>
+								<p class="review-item__date">04 SEPTEMBER 2020</p>
+								<p class="review-item__text">Lorem Ipsum is simply dummy text of the printing and
+									typesetting
+									industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+									when an
+									unknown
+									printer took a galley of type and scrambled it to make a type specimen book. It
+									has
+									survived
+									not
+									only five centuries.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<!-- /.container -->
@@ -351,26 +392,25 @@
 		<div class="container">
 			<h2 class="clients__title title">Our clients</h2>
 			<div class="clients-slider">
-				<div class="clients-item__arrows" data-glide-el="controls">
-					<button class="arrow arrow-left clients-item__arrows-left" data-glide-dir="<">
+				<div class="clients-item__arrows">
+					<button class="arrow arrow-left clients-item__arrows-left">
 						<img src="img/left-arrow.png" alt="">
 					</button>
-					<button class="arrow arrow-right clients-item__arrows-right" data-glide-dir=">">
+					<button class="arrow arrow-right clients-item__arrows-right">
 						<img src="img/right-arrow.png" alt="">
 					</button>
 				</div>
-				<div class="glide__track" data-glide-el="track">
-					<div class="clients-slider__wrap">
-						<div class="clients-item"><img src="img/clients/1.png" alt="" class="clients-item__img"></div>
-						<div class="clients-item"><img src="img/clients/2.png" alt="" class="clients-item__img"></div>
-						<div class="clients-item"><img src="img/clients/3.png" alt="" class="clients-item__img"></div>
-						<div class="clients-item"><img src="img/clients/4.png" alt="" class="clients-item__img"></div>
-						<div class="clients-item"><img src="img/clients/5.png" alt="" class="clients-item__img"></div>
-						<div class="clients-item"><img src="img/clients/6.png" alt="" class="clients-item__img"></div>
-						<div class="clients-item"><img src="img/clients/1.png" alt="" class="clients-item__img"></div>
-						<div class="clients-item"><img src="img/clients/2.png" alt="" class="clients-item__img"></div>
-					</div>
+				<div class="clients-slider__wrap">
+					<div class="clients-item"><img src="img/clients/1.png" alt="" class="clients-item__img"></div>
+					<div class="clients-item"><img src="img/clients/2.png" alt="" class="clients-item__img"></div>
+					<div class="clients-item"><img src="img/clients/3.png" alt="" class="clients-item__img"></div>
+					<div class="clients-item"><img src="img/clients/4.png" alt="" class="clients-item__img"></div>
+					<div class="clients-item"><img src="img/clients/5.png" alt="" class="clients-item__img"></div>
+					<div class="clients-item"><img src="img/clients/6.png" alt="" class="clients-item__img"></div>
+					<div class="clients-item"><img src="img/clients/1.png" alt="" class="clients-item__img"></div>
+					<div class="clients-item"><img src="img/clients/2.png" alt="" class="clients-item__img"></div>
 				</div>
+
 			</div>
 
 
@@ -462,32 +502,10 @@
 		</symbol>
 	</svg>
 
-	<script src="js/glide.min.js"></script>
+	<script src="js/glider.min.js"></script>
+	<script src="js/main.js"></script>
 
-	<script>
-		new Glide('.hero-slider', {
-			type: 'carousel',
-			animationDuration: 600,
-			animationTimingFunc: 'linear',
-			perView: 1,
-			rewind: true
-		}).mount()
 
-		new Glide('.review-slider', {
-			type: 'carousel',
-			animationDuration: 600,
-			animationTimingFunc: 'linear',
-			perView: 2
-		}).mount()
-
-		new Glide('.clients-slider', {
-			type: 'carousel',
-			autoplay: 2000,
-			animationDuration: 600,
-			animationTimingFunc: 'linear',
-			perView: 6,
-		}).mount()
-	</script>
 </body>
 
 </html>
