@@ -1,21 +1,28 @@
 
 .hero
 	&-container
-		padding: 50px 20px
+		padding: 100px 20px
 	&-slider
 		position: relative
-		&__arrows
-			position: absolute
-			top: 30%
-			&-left
+		&-arrows
+			&__container
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				width: 450px
+				position: absolute
+				top: 30%
+			@include _768
+				display: none
+			&__left
 				transform: translateX(-20px)
-			&-right
-				transform: translateX(450px)
+				background-color: $whitecolor
+			&__right
+				background-color: $whitecolor
 	&-slide
 		display: flex
-		flex-wrap: wrap
+		flex-flow: row wrap
 		justify-content: space-between
-		flex-direction: row
 		background-color: #f5f3f1
 		padding: 15px
 		border: 2px solid rgba(201,156 ,71 , 0.4)
@@ -31,8 +38,8 @@
 			color: $activecolor
 			text-transform: uppercase
 			text-align: center
-			font-size: 1.875rem
-			padding: 25px 5px
+			font-size: 1.575rem
+			padding: 15px 5px
 			border: 2px solid $activecolor
 			line-height: 1
 			background-color: $whitecolor
@@ -40,7 +47,7 @@
 			&-small
 				display: inline-block
 				font-size: 1.125rem
-				margin-bottom: 5px
+				margin: 10px 0
 			+Roboto-Black
 		&__text
 			width: 70%

@@ -7,6 +7,8 @@
 		text-transform: uppercase
 		color: $activecolor
 		margin-bottom: 10px
+		@include _768
+			margin-top: 50px
 	&-menu
 		display: flex
 		flex-direction: column
@@ -20,6 +22,9 @@
 	&-contacts
 		font-size: 14px
 		+Roboto-Light
+		@include _768
+			text-align: right
+
 		&__adress
 			line-height: 1.5
 		&__tel
@@ -28,21 +33,23 @@
 			display: block
 			text-decoration: underline
 	&-socials
-		&__item
-			width: 15%
-			text-align: center
-			margin-bottom: 10px
-			margin-right: 20px
-		&__icon
-			height: 40px
-			width: 40px
-			opacity: 0.7
-			fill: $whitecolor
-			margin-bottom: 5px
-			transition: all 0.2s
-			&:hover
-				fill: $activecolor
-				opacity: 1
+		text-align: center
+		&-links
+			&__item
+				width: 15%
+				text-align: center
+				margin-bottom: 10px
+				margin-right: 20px
+			&__icon
+				height: 40px
+				width: 40px
+				opacity: 0.7
+				fill: $whitecolor
+				margin-bottom: 5px
+				transition: all 0.2s
+				&:hover
+					fill: $activecolor
+					opacity: 1
 	&__copyright
 		font-size: 16px
 		text-align: center

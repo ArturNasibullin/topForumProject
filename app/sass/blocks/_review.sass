@@ -62,9 +62,5 @@
 			overflow: auto
 			+Roboto-Light
 		&__arrows
-			position: absolute
-			top: 60%
-			&-left
-				transform: translateX(-40px)
-			&-right
-				transform: translateX(1170px)
+			@include _768
+				display: none
