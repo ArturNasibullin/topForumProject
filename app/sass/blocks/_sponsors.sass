@@ -1,0 +1,61 @@
+.sponsors
+	&__text
+		text-align: center
+		line-height: 1.7
+	&__conf-selector
+		text-align: center
+.conf-selector
+	&__title
+		text-transform: uppercase
+		margin: 40px 0 20px
+	&__select
+		appearance: none
+		font-size: 16px
+		width: 35%
+		height: 40px
+		padding: 0 10px
+		border-radius: 4px
+		border: 1px solid $activecolor
+		outline: none
+		background: url(../img/sponsors/arrow.png) 96% / 15% no-repeat
+		background-size: 20px
+		transition: all 0.3s
+		&:hover
+			background-color: rgba(0, 0, 0, 0.1)
+		@include _768
+			width: 100%
+.sponsor
+	&-card
+		margin-top: 40px
+		display: flex
+		flex-flow: column wrap
+		align-items: center
+		margin-bottom: 20px
+		&__quality
+			font-size: 1.12rem
+			font-weight: 700
+			text-transform: uppercase
+			text-align: center
+			color: $activecolor
+		&__icon
+			flex-basis: content
+			margin: 40px
+			min-height: 80px
+			max-height: 100px
+		&__img
+			width: 120px
+			height: auto
+		&__title
+			font-size: 1.2rem
+			text-transform: uppercase
+		&__descr
+			margin: 10px 0 20px
+			text-align: center
+			padding: 0 10px
+			font-size: 16px
+		&__btn
+			text-align: center
+		&.hidden
+			transform: scale(0)
+			opacity: 0
+			visibility: hidden

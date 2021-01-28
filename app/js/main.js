@@ -49,8 +49,8 @@ window.addEventListener('load', function () {
 		slidesToScroll: 1,
 		draggable: true,
 		arrows: {
-			prev: '.clients-item__arrows-left',
-			next: '.clients-item__arrows-right'
+			prev: '.clients-slider-arrows__left',
+			next: '.clients-slider-arrows__right'
 		},
 		responsive: [
 			{
