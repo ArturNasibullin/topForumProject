@@ -1,55 +1,82 @@
 .header
-	&-menu
-		&__wrap
-			background-color: $metalcolor
-		&__item
-			padding: 15px 15px
-			margin: 10px 0
-			color: $whitecolor
-			border-right: 1px solid rgba(255,255,255, 0.07)
-			font-size: 0.938rem
-			transition: all 0.3s
-			position: relative
-			&:hover
-				background-color: $activecolor
-				& .header-submenu
-					transition: all 0.3s
-					opacity: 1
-					visibility: visible
-					top: 45px
-			&:nth-child(4)
-				border-right: none
-			&:nth-child(1)
-		&--btn
-			background-color: $btn-light
-			color: $metalcolor
+	&-top-line
+		&-menu
+			display: flex
+			flex-flow: row wrap
+			transition: max-height 0.5s ease-in
 			@include _768
-				width: 100%
-				margin-bottom: 10px
-				font-size: 1rem
-			&:hover
-				cursor: pointer
-				box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.349)
-	&-submenu
-		opacity: 0
-		visibility: hidden
-		display: flex
-		flex-flow: column wrap
-		background-color: $whitecolor
-		width: 270px
-		height: auto
-		z-index: 99
-		position: absolute
-		left: 0px
-		top: 100px
-		color: #000
-		&__link
-			padding: 10px
-			transition: all 0.3s
-			&:hover
-				background-color: $activecolor
+				text-align: center
+			@include _480
+				max-height: 0
+				flex-direction: column
+			&.active
+				max-height: 200px
+				@include _480
+					max-height: 250px
+			&__wrap
+				background-color: $metalcolor
+			&__item
+				padding: 15px 15px
+				margin: 10px 0
 				color: $whitecolor
-	&-top
+				border-right: 1px solid rgba(255,255,255, 0.07)
+				font-size: 0.938rem
+				transition: all 0.2s
+				position: relative
+				&:hover
+					background-color: $activecolor
+					& .header-top-line-submenu
+						transition: all 0.3s
+						opacity: 1
+						visibility: visible
+						top: 45px
+						height: 170px
+						@include _480
+							display: none
+							top: 51px
+							width: 100%
+				&:nth-child(4)
+					border-right: none
+				&:nth-child(1)
+				@include _480
+					width: 100%
+					font-size: 1.1rem
+					margin: 0
+					border: none
+			&--btn
+				background-color: $btn-light
+				color: $metalcolor
+				width: 100%
+				@include _768
+					margin-bottom: 10px
+					font-size: 1rem
+				&:hover
+					cursor: pointer
+					box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.349)
+		&__burger-btn
+			margin-bottom: 10px
+		&-submenu
+			opacity: 0
+			visibility: hidden
+			display: flex
+			flex-flow: column wrap
+			background-color: $whitecolor
+			width: 270px
+			height: auto
+			z-index: 99
+			position: absolute
+			left: 0px
+			top: 100px
+			color: #000
+			@include _480
+				width: 100%
+			&__link
+				padding: 10px
+				transition: all 0.3s
+				&:hover
+					background-color: $activecolor
+					color: $whitecolor
+	&-bottom-line
 		&__wrap
 			margin-top: 15px
 		&__items
@@ -58,6 +85,9 @@
 			@include _768
 				flex-direction: column
 				margin-bottom: 10px
+		&__logo-img
+			display: block
+			margin: 0 auto
 		&__item
 			width: 50%
 			margin-right: 10px
@@ -95,8 +125,8 @@
 					transform: scaleX(1)
 			+Roboto-Light
 		&--btn
+			width: 100%
 			@include _768
-				width: 100%
 				margin-bottom: 10px
 				font-size: 1rem
 .menu

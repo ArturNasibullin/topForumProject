@@ -2,13 +2,15 @@
 	&__item
 		@include _768
 			margin-bottom: 35px
-
 	&__text
 		text-align: justify
 		margin: 65px 0
 		font-size: 1.063rem
 		line-height: 1.9
 		+Roboto-Light
+		@include _480
+			text-align: center
+			padding: 0 15px
 	&__img
 		margin-bottom: 25px
 	&__icon

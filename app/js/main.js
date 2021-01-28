@@ -19,6 +19,8 @@ new Glider(document.querySelector('.hero-slider__wrap'), {
 });
 
 window.addEventListener('load', function () {
+
+	// slider
 	new Glider(document.querySelector('.review-slider__wrap'), {
 		slidesToShow: 1,
   		slidesToScroll: 1,
@@ -26,8 +28,8 @@ window.addEventListener('load', function () {
   		dots: '.review-dots',
 		draggable: true,
 		arrows: {
-			prev: '.review-item__arrows-left',
-			next: '.review-item__arrows-right'
+			prev: '.review-slider-arrows__left',
+			next: '.review-slider-arrows__right'
 		},
 		responsive: [
 			{
@@ -61,13 +63,40 @@ window.addEventListener('load', function () {
 				rewind: true
 			  }
 			},
-			{
-				// // screens greater than >= 1024px
-				// breakpoint: 1024,
-				// settings: {
-				//   slidesToShow: 6
-				// }
-			}
 		  ]
+	});
+
+	//Кнопка menu
+	let btn = document.querySelector('.header-top-line__burger-btn');
+	let menu = document.querySelector('.header-top-line-menu');
+	let subMenu = document.querySelectorAll('.header-top-line-submenu');
+	let menuItem = document.querySelectorAll('.header-top-line-submenu__link');
+	
+	btn.addEventListener('click', (e) => {
+		e.preventDefault();
+		menu.classList.toggle('active');
+		menu.style.opacity = 1;
+		btn.classList.toggle('active');
+		subMenu.forEach(link => {
+			link.style.display = 'flex';
+		});
+
+		menuItem.forEach(item => {
+			item.addEventListener('click', (e) => {
+				e.preventDefault();
+				btn.classList.remove('active');
+				menu.classList.remove('active');
+				menu.style.opacity = 0;
+				subMenu.forEach(link => {
+					link.style.display = 'none';
+				});
+			});
+		});
+		//Блокировать прокрутку экрана при активном Меню
+		// if (menu.classList.contains('active')) {
+		// 	document.body.style.overflow = 'hidden';
+		// } else {
+		// 	document.body.style.overflow = '';
+		// }
 	});
 });

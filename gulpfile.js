@@ -67,6 +67,18 @@ gulp.task('libs-css', function() {
 });
 
 
+gulp.task('babel', function () {
+    return gulp.src([
+        'app/js/main.js'
+    ])
+    .pipe(babel({
+        presets: ["@babel/preset-env"]
+	}))
+	// .pipe(uglify()) // Сжимаем JS файл
+	.pipe(rename('main-min.js'))
+    .pipe(gulp.dest('app/js'));
+});
+
 gulp.task('code', function() {
 	return gulp.src('app/*.html')
 	.pipe(browserSync.reload({ stream: true }));
@@ -80,18 +92,6 @@ gulp.task('script', function() {
 gulp.task('clean', async function() {
 	return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
-
-// gulp.task('babel', function () {
-//     return gulp.src([
-//         'app/js/main.js'
-//     ])
-//     .pipe(babel({
-//         presets: ["@babel/preset-env"]
-// 	}))
-// 	// .pipe(uglify()) // Сжимаем JS файл
-// 	.pipe(rename('main-min.js'))
-//     .pipe(gulp.dest('app/js'));
-// });
 
 gulp.task('img', function() {
 	return gulp.src('app/img/**/*') // Берем все изображения из app
@@ -123,7 +123,6 @@ gulp.task('prebuild', async function() {
 	.pipe(gulp.dest('dist/img'));
     
 });
- 
 
 gulp.task('clear', function (callback) {
 	return cache.clearAll();
@@ -132,10 +131,10 @@ gulp.task('clear', function (callback) {
 gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.sass', gulp.parallel('sass')); // Наблюдение за sass файлами
 	gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
-	gulp.watch(['app/js/main.js', 'app/js/libs.js'], gulp.parallel('script')); // Наблюдение за главным JS файлом и за библиотеками
-	// gulp.watch('app/js/main.js', gulp.parallel('script')); // Наблюдение за главным JS файлом
+	// gulp.watch(['app/js/main.js', 'app/js/libs.js'], gulp.parallel('script')); // Наблюдение за главным JS файлом и за библиотеками
+	gulp.watch('app/js/main.js', gulp.parallel('script')); // Наблюдение за главным JS файлом
 });
-gulp.task('default', gulp.parallel('sass', 'browser-sync', 'watch', 'script', 'libs-js', 'libs-css'));
-gulp.task('build', gulp.parallel('clean','prebuild', 'img', 'sass'));
+gulp.task('default', gulp.parallel('sass', 'browser-sync', 'watch', 'script'));
+gulp.task('build', gulp.parallel('clean','prebuild', 'img', 'sass', 'webp'));
 
 
