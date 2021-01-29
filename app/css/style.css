@@ -393,7 +393,7 @@ body {
   opacity: 1;
   visibility: visible;
   top: 45px;
-  height: 170px;
+  height: auto;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1280,5 +1280,48 @@ body {
           transform: scale(0);
   opacity: 0;
   visibility: hidden;
+}
+
+.sponsor-page__wrap {
+  margin-bottom: 40px;
+  font-size: 1.063rem;
+  font-family: 'Roboto-Light', sans-serif;
+}
+
+.sponsor-page__logo {
+  display: block;
+  margin: 20px auto 50px;
+  width: 200px;
+}
+
+.sponsor-page__text {
+  padding: 0 15px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.sponsor-page__offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.sponsor-page__offer-img {
+  width: 300px;
+  background-color: #f8f3e9;
+}
+
+.sponsor-page__offer-descr {
+  padding: 0 15px;
+  text-align: justify;
+  line-height: 1.6;
 }
 /*# sourceMappingURL=style.css.map */
