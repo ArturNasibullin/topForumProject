@@ -42,15 +42,20 @@
 								<li class="header-top-line-menu__item"><a href="#"
 										class="header-top-line-menu__link">Speakers</a>
 									<ul class="header-top-line-submenu">
-										<li class="header-top-line-submenu__link"><a href="speakers.html">All
+										<li class="header-top-line-submenu-speakers__link" data-filter='0'><a
+												href="speakers.html">All
 												speakers</a></li>
-										<li class="header-top-line-submenu__link"><a href="speakers.html">Wealth TOP
+										<li class="header-top-line-submenu-speakers__link" data-filter='1'><a
+												href="speakers.html">Wealth TOP
 												FORUM Israel
 												2021</a></li>
-										<li class="header-top-line-submenu__link"><a href="speakers.html">TOP Marketing
+										<li class="header-top-line-submenu-speakers__link" data-filter='2'><a
+												href="speakers.html">TOP
+												Marketing
 												2021</a>
 										</li>
-										<li class="header-top-line-submenu__link"><a href="speakers.html">World
+										<li class="header-top-line-submenu-speakers__link" data-filter='3'><a
+												href="speakers.html">World
 												Education Forum</a>
 										</li>
 									</ul>
@@ -102,12 +107,11 @@
 		</div>
 	</header>
 
-	<section class="sponsor-page">
+	<section class="speakers">
 		<div class="container">
-			<div class="sponsor-page__wrap">
-				<h2 class="title sponsor-page__title">the title of the sponsor</h2>
-				<img src="img/sponsors/sponsor-1.png" alt="sponsor" class="sponsor-page__logo">
-				<p class="sponsor-page__text text">
+			<div class="speakers__wrap">
+				<h2 class="title speakers__title">our speakers</h2>
+				<p class="speakers__text text">
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
 					industry's standard dummy text ever since the 1500Lorem Ipsum is simply dummy text of the printing
 					and
@@ -115,31 +119,89 @@
 					when
 					an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum
 					is
-					simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-					industry's standard dummy text ever since the 1500Lorem Ipsum is simply dummy text of the printing
-					and
-					typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-					when
-					an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					simply dummy text of the printing and typesetting industry.
 				</p>
-				<div class="sponsor-page__offer">
-					<a href="#"><img src="img/sponsors/offer-1.jpg" alt="offer" class="sponsor-page__offer-img"></a>
-					<a href="#"><img src="img/sponsors/offer-1.jpg" alt="offer" class="sponsor-page__offer-img"></a>
+				<div class="speakers__conf-selector conf-selector">
+					<h4 class="conf-selector__title">please select a conference</h4>
+					<select name="conf-selector__select" id="conf-selector" class="conf-selector__select">
+						<option class="conf-selector__option" value="" selected>All speakers</option>
+						<option class="conf-selector__option" value="1">Wealth TOP FORUM Israel
+							2021</option>
+						<option class="conf-selector__option" value="2">TOP Marketing 2021</option>
+						<option class="conf-selector__option" value="3">World Education Forum</option>
+					</select>
 				</div>
-				<div class="sponsor-page__offer-descr text">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-					industry's standard dummy text ever since the 1500Lorem Ipsum is simply dummy text of the printing
-					and
-					typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-					when
-					an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum
-					is
-					simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-					industry's standard dummy text ever since the 1500Lorem Ipsum is simply dummy text of the printing
-					and
-					typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-					when
-					an unknown printer took a galley of type and scrambled it to make a type specimen book.
+				<div class="speaker">
+					<div class="row justify-content-around">
+						<div class="col-12 col-md-6 col-lg-4 speaker-card" data-speaker='1'>
+							<div class="speaker-card__icon">
+								<div class="speaker-card__img">
+									<img src="img/speakers/speaker-1.jpg" alt="speaker" class="speaker-card__img">
+								</div>
+							</div>
+							<h3 class="speaker-card__title">Olivia Ava</h3>
+							<p class="speaker-card__descr text">Lorem Lorem Ipsum is simply dummy text of the printing
+								and
+								typesetting
+								industry. Lorem Ipsum has beenIpsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been.</p>
+							<a class="btn btn--more" href="sponsor-page.html">Learn more</a>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4 speaker-card" data-speaker='1'>
+							<div class="speaker-card__icon"><img src="img/speakers/speaker-2.jpg" alt="speaker"
+									class="speaker-card__img"></div>
+							<h3 class="speaker-card__title">Emily Harper
+							</h3>
+							<p class="speaker-card__descr text">Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been.</p>
+							<a class="btn btn--more" href="sponsor-page.html">Learn more</a>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4 speaker-card" data-speaker='1'>
+							<div class="speaker-card__icon"><img src="img/speakers/speaker-3.jpg" alt="speaker"
+									class="speaker-card__img"></div>
+							<h3 class="speaker-card__title">Alexander Mason</h3>
+							<p class="speaker-card__descr text">Lorem Ipsum is simply dummy text of the printing and
+								typesetting
+								industry. Lorem Ipsum has been.</p>
+							<a class="btn btn--more" href="sponsor-page.html">Learn more</a>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4 speaker-card" data-speaker='2'>
+							<div class="speaker-card__icon"><img src="img/speakers/speaker-4.jpg" alt="speaker"
+									class="speaker-card__img"></div>
+							<h3 class="speaker-card__title">Henry Matthew</h3>
+							<p class="speaker-card__descr text">Lorem Ipsum is simply dummy text of the printing and
+								typesetting
+								industry. Lorem Ipsum has been.</p>
+							<a class="btn btn--more" href="sponsor-page.html">Learn more</a>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4 speaker-card" data-speaker='2'>
+							<div class="speaker-card__icon"><img src="img/speakers/speaker-1.jpg" alt="speaker"
+									class="speaker-card__img"></div>
+							<h3 class="speaker-card__title">Olivia Ava</h3>
+							<p class="speaker-card__descr text">Lorem Ipsum is simply dummy text of the printing and
+								typesetting
+								industry. Lorem Ipsum has been.</p>
+							<a class="btn btn--more" href="sponsor-page.html">Learn more</a>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4 speaker-card" data-speaker='2'>
+							<div class="speaker-card__icon"><img src="img/speakers/speaker-2.jpg" alt="speaker"
+									class="speaker-card__img"></div>
+							<h3 class="speaker-card__title">Emily Harper</h3>
+							<p class="speaker-card__descr text">Lorem Ipsum is simply dummy text of the printing and
+								typesetting
+								industry. Lorem Ipsum has been.</p>
+							<a class="btn btn--more" href="sponsor-page.html">Learn more</a>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4 speaker-card" data-speaker='3'>
+							<div class="speaker-card__icon"><img src="img/speakers/speaker-3.jpg" alt="speaker"
+									class="speaker-card__img"></div>
+							<h3 class="speaker-card__title">Alexander Mason</h3>
+							<p class="speaker-card__descr text">Lorem Ipsum is simply dummy text of the printing and
+								typesetting
+								industry. Lorem Ipsum has been.</p>
+							<a class="btn btn--more" href="sponsor-page.html">Learn more</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -225,6 +287,8 @@
 			</svg>
 		</symbol>
 	</svg>
+	<!-- <script src="js/test.js"></script> -->
+	<script src="js/speakers.js"></script>
 	<script src="js/menuBtn.js"></script>
 </body>
 

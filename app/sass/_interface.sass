@@ -10,6 +10,11 @@ body
 	font-size: 1.5rem
 	padding: 50px 0 40px
 	+Roboto-Medium
+.text
+	text-align: center
+	font-size: 1.063rem
+	line-height: 1.7
+	+Roboto-Light
 .hidden
 	opacity: 0
 	visibility: hidden
@@ -23,15 +28,58 @@ body
 	text-transform: uppercase
 	border: none
 	outline: none
-	color: $whitecolor
-	background-color: $activecolor
-	transition: all 0.3s
+	color: $activecolor
+	border: 1px solid $activecolor
+	transition: all 300ms ease
+	text-align: center
 	font-size: 0.75rem
 	+Roboto-Regular
-	&:hover
-		cursor: pointer
-		box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.3)
-		transform: scale(1.01)
+	&--regular
+		background-color: $activecolor
+		color: $whitecolor
+		border: none
+		&:hover
+			cursor: pointer
+			box-shadow: 0px 4px 10px 2px rgba(0,0,0, 0.2)
+		&-light
+			border: none
+			background-color: $btn-light
+			color: $metalcolor
+			width: 100%
+			&:hover
+				cursor: pointer
+				box-shadow: 0px 4px 10px 2px rgba(255, 255, 255, 0.349)
+	&--more
+		position: relative
+		text-transform: none
+		margin: 0 auto
+		display: block
+		box-shadow: 0px 4px 10px 2px rgba(0,0,0, 0.2)
+		&:before
+			position: absolute
+			content: ''
+			width: 0%
+			height: 100%
+			background: $activecolor
+			top: 0
+			left: auto
+			right: 0
+			z-index: -1
+			transition: all 600ms ease
+		&:hover
+			color: $whitecolor
+			box-shadow: none
+			&:before
+				position: absolute
+				content: ''
+				width: 100%
+				height: 100%
+				background: $activecolor
+				top: 0
+				left: 0
+				right: 0
+				z-index: -1
+
 .arrow
 	padding: 5px
 	background-color: transparent
@@ -74,7 +122,26 @@ body
 	@include _768
 		width: 15px
 		height: 15px
-
+.conf-selector
+	&__title
+		text-transform: uppercase
+		margin: 40px 0 20px
+	&__select
+		appearance: none
+		font-size: 16px
+		width: 35%
+		height: 40px
+		padding: 0 10px
+		border-radius: 4px
+		border: 1px solid $activecolor
+		outline: none
+		background: url(../img/sponsors/arrow.png) 96% / 15% no-repeat
+		background-size: 20px
+		transition: all 0.3s
+		&:hover
+			cursor: pointer
+		@include _768
+			width: 100%
 	// @include _768
 	// 	display: none
 // .form

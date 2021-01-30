@@ -4,26 +4,6 @@
 		line-height: 1.7
 	&__conf-selector
 		text-align: center
-.conf-selector
-	&__title
-		text-transform: uppercase
-		margin: 40px 0 20px
-	&__select
-		appearance: none
-		font-size: 16px
-		width: 35%
-		height: 40px
-		padding: 0 10px
-		border-radius: 4px
-		border: 1px solid $activecolor
-		outline: none
-		background: url(../img/sponsors/arrow.png) 96% / 15% no-repeat
-		background-size: 20px
-		transition: all 0.3s
-		&:hover
-			background-color: rgba(0, 0, 0, 0.1)
-		@include _768
-			width: 100%
 .sponsor
 	&-card
 		margin-top: 40px
@@ -41,7 +21,7 @@
 			flex-basis: content
 			margin: 40px
 			min-height: 80px
-			max-height: 100px
+			max-height: 80px
 		&__img
 			width: 120px
 			height: auto
@@ -53,9 +33,3 @@
 			text-align: center
 			padding: 0 10px
 			font-size: 16px
-		&__btn
-			text-align: center
-		&.hidden
-			transform: scale(0)
-			opacity: 0
-			visibility: hidden
