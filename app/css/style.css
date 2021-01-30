@@ -151,7 +151,7 @@ body {
   text-align: center;
   font-weight: 500;
   font-size: 1.5rem;
-  padding: 50px 0 40px;
+  padding: 50px 0 20px;
   font-family: 'Roboto-Medium', sans-serif;
 }
 
@@ -871,7 +871,7 @@ body {
 .about__title {
   text-transform: uppercase;
   text-align: center;
-  min-height: 50px;
+  min-height: 40px;
   font-size: 1.063rem;
 }
 
@@ -1437,6 +1437,10 @@ body {
   margin-bottom: 40px;
 }
 
+.media__title {
+  font-family: 'Roboto-Medium', sans-serif;
+}
+
 .media__text {
   margin-bottom: 40px;
 }
@@ -1483,5 +1487,66 @@ body {
 .media-item__link:hover {
   color: #c99c47;
   text-decoration: underline;
+}
+
+.events-item {
+  margin: 0 0 20px;
+  border-bottom: 1px solid #c99c47;
+  padding: 20px 0;
+  font-family: 'Roboto-Medium', sans-serif;
+}
+
+.events-item__img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.events-item__title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.events-item__date {
+  margin: 10px 0;
+  color: #c99c47;
+}
+
+.events-item__text {
+  text-align: justify;
+  font-size: 0.938rem;
+}
+
+.events-item__btn {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .events-item__btn {
+    display: block;
+    margin: 20px auto 0;
+  }
+}
+
+.events-item__sold {
+  display: inline-block;
+  font-size: 2rem;
+  color: #ff0000;
+  text-transform: uppercase;
+  padding: 10px;
+  border: 2px solid #ff0000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 40%;
+  left: 25%;
+}
+
+@media only screen and (max-width: 480px) {
+  .events-item__sold {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
