@@ -61,7 +61,7 @@
 							</ul>
 						</div>
 						<div class="col-sm-12 col-md-3">
-							<a href="#" class="btn btn--regular-light header-top-line__btn">top forum club</a>
+							<button class="btn btn--regular-light header-top-line__btn  modal-open">top forum club</button>
 						</div>
 					</div>
 				</div>
@@ -78,13 +78,13 @@
 						</div>
 						<div class="col-12 col-sm-7 col-md-6 col-lg-5">
 							<div class="header-bottom-line__items">
-								<a href="#" class="header-bottom-line__item">
+								<a href="events.html" class="header-bottom-line__item">
 									<div class="header-bottom-line__icon">
 										<img src="img/trophy-icon.png" alt="trophy-icon" class="header-bottom-line__img">
 									</div>
 									<span class="header-bottom-line__text">Upcoming Events</span>
 								</a>
-								<a href="#" class="header-bottom-line__item">
+								<a href="contacts.html" class="header-bottom-line__item">
 									<div class="header-bottom-line__icon">
 										<img src="img/flag-icon.png" alt="flag-icon" class="header-bottom-line__img">
 									</div>
@@ -229,6 +229,35 @@
 		</div>
 	</footer>
 
+	<!--Modal-->
+	<div class="modal">
+		<div class="modal__overlay">
+			<div class="modal__wrapper">
+				<a class="modal__close" href="#">&times;</a>
+				<h2 class="modal__title">Subscribe</h2>
+				<p class="modal__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				<form class="modal-form form" action="mail.php" method="POST">
+					<div class="modal-form__wrap">
+						<input class="form__input modal__input" required type="text" name="user_name" id="user_name"
+							placeholder="NAME">
+						<input class="form__input modal__input" required type="text" name="user_phone" id="user_phone"
+							placeholder="COMPANY">
+						<input class="form__input modal__input" required type="email" name="user_email" id="user_email"
+							placeholder="E-MAIL">
+						<input type="submit" class="btn form__btn modal__btn btn--regular" value="Subscribe">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal-thanks">
+		<div class="modal__overlay">
+			<div class="modal__wrapper gradient">
+				<a class="modal__close" href="#">&times;</a>
+				<h2 class="modal-thanks__header"></h2>
+			</div>
+		</div>
+	</div>
 	<!-- SVG sprite-->
 	<svg style="display: none;">
 		<symbol id="instagram">
@@ -246,7 +275,7 @@
 			</svg>
 		</symbol>
 	</svg>
-	<script src="js/menuBtn.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

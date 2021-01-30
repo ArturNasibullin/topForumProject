@@ -1,0 +1,100 @@
+.modal
+	display: none
+	&__overlay
+		width: 100%
+		min-height: 100vh
+		z-index: 7000
+		padding: 40px
+		position: fixed
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		top: 0
+		left: 0
+		background: rgba(0, 0, 0, 0.75)
+		opacity: 1
+		transition: 0.35s ease-in-out
+		max-height: 100vh
+		overflow: hidden
+		&.open
+			opacity: 1
+			cursor: pointer
+	&__wrapper
+		z-index: 9979
+		position: relative
+		margin-top: 100px
+		background-color: $whitecolor
+		max-width: 450px
+		padding: 30px
+		border-radius: 15px
+		border: 2px solid $activecolor
+		@include _480
+			margin-top: 0
+	&__title
+		font-size: 1.4rem
+		text-transform: uppercase
+		margin-bottom: 10px
+		text-align: center
+	&__subtitle
+		text-align: center
+		line-height: 1.7
+	&__close
+		position: absolute
+		font-size: 60px
+		color: #ffffff
+		top: -24px
+		right: -35px
+	&-form__wrap
+	&__input
+		text-align: center
+		font-size: 1.2rem
+		width: 100%
+		margin-bottom: 10px
+	&__btn
+		font-size: 1rem
+		display: block
+		margin: 20px auto
+.modal-thanks
+	display: none
+	&__overlay
+		width: 100%
+		min-height: 100vh
+		z-index: 7000
+		padding: 40px
+		position: fixed
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		top: 0
+		left: 0
+		background: rgba(0, 0, 0, 0.75)
+		opacity: 1
+		transition: 0.35s ease-in-out
+		max-height: 100vh
+		overflow: hidden
+		&.open
+			opacity: 1
+			cursor: pointer
+	&__wrapper
+		z-index: 9979
+		position: relative
+		margin-top: 100px
+		color: #fff
+		max-width: 450px
+		padding: 30px
+		border-radius: 15px
+		@include _480
+			margin-top: 0
+	&__header
+		+fluidFontSize(14, 18, 350, 1170)
+		text-transform: uppercase
+		margin-bottom: 30px
+		text-align: center
+	&__close
+		position: absolute
+		font-size: 60px
+		color: #ffffff
+		top: -24px
+		right: -35px

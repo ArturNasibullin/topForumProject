@@ -1,5 +1,14 @@
 .header
 	&-top-line
+		&--fixed
+			z-index: 9999
+			position: fixed
+			background-color: $metalcolor
+			padding: 0 20px
+			opacity: .95
+			top: 0
+			left: 0
+			width: 100%
 		&-menu
 			display: flex
 			flex-flow: row wrap
@@ -16,7 +25,6 @@
 			&__wrap
 				background-color: $metalcolor
 			&__item
-				padding: 15px 15px
 				margin: 10px 0
 				color: $whitecolor
 				border-right: 1px solid rgba(255,255,255, 0.07)
@@ -43,6 +51,8 @@
 					font-size: 1.1rem
 					margin: 0
 					border: none
+			&__link
+				padding: 15px 15px
 		&__btn
 			width: 100%
 			@include _768
