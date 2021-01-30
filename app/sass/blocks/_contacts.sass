@@ -1,0 +1,64 @@
+.contacts
+	&__wrap
+		margin-top: 40px
+	&-item
+		margin-bottom: 20px
+		@include _768
+			&:nth-child(1)
+				margin-top: 40px
+		&__title
+			text-transform: uppercase
+			+Roboto-Medium
+		&__name
+			margin: 5px 0
+		&__email
+			color: $activecolor
+			text-decoration: underline
+			margin: 10px 0
+.feedback
+	&__wrap
+		margin-bottom: 40px
+	&__hotline
+		margin-top: 20px
+		text-align: justify
+	&__link
+		text-transform: uppercase
+		text-decoration: underline
+		color: $activecolor
+.form
+	&__label
+		font-size: 0.9rem
+		+Roboto-Medium
+	&__textarea
+		width: 100%
+		resize: none
+	&__input
+		border: 1px solid $activecolor
+		padding: 10px 0 10px 10px
+		margin: 10px 0
+		&:focus
+			outline: 1.4px solid $activecolor
+	&-contacts
+		&__wrap
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			align-items: center
+		&__input
+			width: 48%
+			height: 50px
+			@include _480
+				width: 100%
+	&__btn
+		display: block
+		text-transform: uppercase
+		margin-top: 10px
+		margin-left: auto
+		margin-right: 0
+		padding: 15px 35px
+		@include _480
+			width: 100%
+// input:invalid
+// 	border-color: red
+// 	color: red
+// 	box-shadow: none
