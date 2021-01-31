@@ -1,148 +1,20 @@
 body
-	font-family: 'Roboto-Regular', 'Helvetica', sans-serif
-	font-weight: 400
+	font-family: 'Roboto', 'Helvetica', sans-serif
+	font-weight: $font-weight__sans--regular
 	color: $textcolor
-	+fluidFontSize(12,16)
+	+fluidFontSize($font-size--small,$font-size--base)
 .title
 	text-transform: uppercase
 	text-align: center
-	font-weight: 500
-	font-size: 1.5rem
 	padding: 50px 0 20px
-	+Roboto-Medium
+	+text($font-family__sans, 1.5rem, $font-weight__sans--medium)
 .text
 	text-align: center
-	font-size: 1.063rem
-	line-height: 1.7
-	+Roboto-Light
+	+text($font-family__sans, 1.1rem, $font-weight__sans--regular)
+	line-height: $line-height
 	&-big
-		font-size: 1.5rem
-		+Roboto-Black
-.hidden
-	opacity: 0
-	visibility: hidden
+		+text($font-family__sans, 1.5rem, $font-weight__sans--black)
 .background-color
 	background-color: $bg-color
 .metalcolor-bg
 	background-color: $metalcolor
-.btn
-	padding: 15px 25px
-	width: 150px
-	text-transform: uppercase
-	border: none
-	outline: none
-	color: $activecolor
-	border: 1px solid $activecolor
-	transition: all 300ms ease
-	text-align: center
-	font-size: 0.75rem
-	+Roboto-Regular
-	&--regular
-		background-color: $activecolor
-		color: $whitecolor
-		border: none
-		transition: all 300ms ease
-		&:hover
-			cursor: pointer
-			box-shadow: 0px 4px 10px 2px rgba(0,0,0, 0.2)
-		&-light
-			border: none
-			background-color: $btn-light
-			color: $metalcolor
-			width: 100%
-			&:hover
-				cursor: pointer
-				box-shadow: 0px 4px 10px 2px rgba(255, 255, 255, 0.349)
-	&--more
-		position: relative
-		text-transform: none
-		margin: 0 auto
-		display: block
-		box-shadow: 0px 4px 10px 2px rgba(0,0,0, 0.2)
-		&:before
-			position: absolute
-			content: ''
-			width: 0%
-			height: 100%
-			background: $activecolor
-			top: 0
-			left: auto
-			right: 0
-			z-index: -1
-			transition: all 600ms ease
-		&:hover
-			color: $whitecolor
-			box-shadow: none
-			&:before
-				position: absolute
-				content: ''
-				width: 100%
-				height: 100%
-				background: $activecolor
-				top: 0
-				left: 0
-				right: 0
-				z-index: -1
-
-.arrow
-	padding: 5px
-	background-color: transparent
-	border: none
-	cursor: pointer
-	background-position: 0 0
-	background-repeat: no-repeat
-	background-size: contain
-	z-index: 999
-	width: 12px
-	height: 47px
-	&__wrapper
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		width: 100%
-	&-left
-		background-image: url(../img/left-arrow.png)
-	&-right
-		background-image: url(../img/right-arrow.png)
-	&:focus
-		outline: none
-
-.glider-dot
-	width: 20px
-	height: 20px
-	border-radius: 50%
-	background-color: $activecolor
-	opacity: 0.3
-	border: none
-	outline: none
-	&.active
-		background-color: $activecolor
-		opacity: 1
-	&:hover
-		background-color: $activecolor
-		opacity: 1
-	&--white
-		background-color: $whitecolor
-	@include _768
-		width: 15px
-		height: 15px
-.conf-selector
-	&__title
-		text-transform: uppercase
-		margin: 40px 0 20px
-	&__select
-		appearance: none
-		font-size: 16px
-		width: 35%
-		height: 40px
-		padding: 0 10px
-		border-radius: 4px
-		border: 1px solid $activecolor
-		outline: none
-		background: url(../img/sponsors/arrow.png) 96% / 15% no-repeat
-		background-size: 20px
-		transition: all 0.3s
-		&:hover
-			cursor: pointer
-		@include _768
-			width: 100%

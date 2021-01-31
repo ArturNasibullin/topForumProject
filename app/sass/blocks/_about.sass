@@ -5,9 +5,8 @@
 	&__text
 		text-align: justify
 		margin: 65px 0
-		font-size: 1.063rem
-		line-height: 1.9
-		+Roboto-Light
+		+text($font-family__sans, 1.1rem, $font-weight__sans--light)
+		line-height: $line-height
 		@include _480
 			text-align: center
 			padding: 0 15px
@@ -50,7 +49,7 @@
 		padding: 15px 0
 		@include _768
 			margin: 10px 0
-		@include fluidFontSize(12, 14, 350, 1170)
+		@include fluidFontSize(12px, 14px)
 	&__register--btn
 		@include _768
 			width: 100%

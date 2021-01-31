@@ -2,19 +2,22 @@
 // Сброс всех стилей
 @import reset
 
-// Подключение медиазапросов
-@import media_mixin
-
 // Подключение шрифтов
 @import _fonts.sass
 
-// Подключение переменных
+// Подключение переменных и миксинов
 @import vars
+@import mixins
+@import typography
+@import _fluidFontSize.scss
 
 // Подключение основных компнентов интерфейса
-@import _fluidFontSize.scss
+@import elements
 @import interface
-@import burger
+
+// Подключение готовых блоков  из бибилиотеки
+@import libs/burger
+@import libs/modal
 
 //Подключение блоков 
 @import blocks/header-top
@@ -30,4 +33,3 @@
 @import blocks/media
 @import blocks/events
 @import blocks/contacts
-@import blocks/modal

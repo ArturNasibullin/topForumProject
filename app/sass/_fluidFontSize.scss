@@ -5,9 +5,9 @@
 	}
   
 	@return $number;
-  }
+}
   
-  @function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px, $fallback: $f-max ) {
+  @function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
 	$f-min: strip-unit($f-min);
 	$f-max: strip-unit($f-max);
 	$w-min: strip-unit($w-min);
@@ -17,15 +17,24 @@
 	  $b: $f-min - $k * $w-min;
   
 	  $b: $b + $units;
-  
+		
 	  @return calc( #{$k} * 100vw + #{$b} );
 
   }
   
-  @mixin fluidFontSize($f-min, $f-max, $w-min: 350, $w-max: 1170) {
-	
-	  font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: $f-max );  
-  }
+@mixin fluidFontSize($f-min, $f-max, $w-min:480px, $w-max:1170px, $fallback: false) {
+font-size: $f-min;
+
+	@media (min-width: $w-min) {
+		@if ($fallback) {
+			font-size: $fallback;
+		}
+		font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);  
+	}
+	@media (min-width: $w-max) {
+		font-size: $f-max;
+	}
+}
   
 
 //   .fluid-font-size {
